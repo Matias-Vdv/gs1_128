@@ -89,7 +89,7 @@ Feel free to add or request some. Full list is [here](http://www.databar-barcode
 |Code       |Name                                        |Min length |Max length |
 |-----------|--------------------------------------------|-----------|-----------|
 |00         |SERIAL SHIPPING CONTAINER CODE              |18         |18         |
-|01         |GLOBAL TRADE ITEM NUMBER                    |14         |14         |
+|01         |GLOBAL TRADE ITEM NUMBER                    |8          |14         |
 |02         |ITEM TRADE ITEM NUMBER                      |14         |14         |
 |10         |BATCH NUMBER                                |1          |20         |
 |12         |PAYMENT DATE  (YYMMDD)                      |6          |6          |

@@ -34,7 +34,7 @@ class SectionBuilder
 
     private $data = [
         '00' => [18, 18, 'SERIAL SHIPPING CONTAINER CODE (00) - must contains exact 18 digits'],
-        '01' => [14, 14, 'GLOBAL TRADE ITEM NUMBER (01) - must contains excat 14 digits'],
+        '01' => [8, 14, 'GLOBAL TRADE ITEM NUMBER (01) - must contains excat 14 digits'],
         '02' => [14, 14, 'ITEM TRADE ITEM NUMBER (02) - must contains excat 14 digits'],
         '10' => [1, 20, 'BATCH NUMBER (10) - must contains between 1-20 digits'],
         '11' => [6, 6, 'PRODUCTION DATE (11) - must contains exact 6 digits'],

@@ -18,4 +18,43 @@ class SectionSlicerTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(json_encode ($expected), json_encode($sections));
     }
+
+    public function testSlicingGtin8()
+    {
+        $slicer = new SectionSlicer();
+        $sections = $slicer->getSections('(01)40170725(10)42432423');
+
+        $expected = [
+            new Section('01', '40170725'),
+            new Section('10', '42432423')
+        ];
+
+        $this->assertEquals(json_encode ($expected), json_encode($sections));
+    }
+
+    public function testSlicingGtin12()
+    {
+        $slicer = new SectionSlicer();
+        $sections = $slicer->getSections('(01)614141999996(10)42432423');
+
+        $expected = [
+            new Section('01', '614141999996'),
+            new Section('10', '42432423')
+        ];
+
+        $this->assertEquals(json_encode ($expected), json_encode($sections));
+    }
+
+    public function testSlicingGtin13()
+    {
+        $slicer = new SectionSlicer();
+        $sections = $slicer->getSections('(01)5012345678900(10)42432423');
+
+        $expected = [
+            new Section('01', '5012345678900'),
+            new Section('10', '42432423')
+        ];
+
+        $this->assertEquals(json_encode ($expected), json_encode($sections));
+    }
 }
